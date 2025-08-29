@@ -1,6 +1,7 @@
 package jif;
 
-public class Guitar implements MakesSound {
+// a class that is marked as final cannot be extended
+public final class Guitar implements MakesSound {
     private String sound;
 
     public Guitar() {
