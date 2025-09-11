@@ -11,10 +11,10 @@ public class SaySomethingAnonymousClass {
 
     public String sayStuffAmericanEnglish() {
         /*
-         * Anonymous classes enable you to make your code more concise. They enable you to declare and instantiate a class at the same 
-         * time. They are like local classes except that they do not have a name. Use them if you need to use a local class only once.
+         * Anonymous classes enable you to make your code more concise. They enable * you to declare and instantiate a class at the same 
+         * time. They are like local classes except that they do not have a name.  * Use them if you need to use a local class only once.
          */
-        class MyGreetingEnglish implements SaySomething {
+        SaySomething greeting = new SaySomething() {
             public String sayHi() {
                 return "Hello!";
             }
@@ -23,14 +23,13 @@ public class SaySomethingAnonymousClass {
             }
             public String sayFavoriteMovie() {
                 return "My favorite movie is Spinal Tap.";
-            }
-        }
-        SaySomething greeting = new MyGreetingEnglish();
+            }               
+        };
         return greeting.sayHi() + " " + greeting.sayBye() + " " + greeting.sayFavoriteMovie();
     }
 
     public String sayStuffSpanish() {
-        class MyGreetingSpanish implements SaySomething {
+        SaySomething greeting = new SaySomething() {
             public String sayHi() {
                 return "Hola!";
             }
@@ -39,9 +38,8 @@ public class SaySomethingAnonymousClass {
             }
             public String sayFavoriteMovie() {
                 return "Mi película favorita es Spinal Tap.";
-            }
-        }
-        SaySomething greeting = new MyGreetingSpanish();
+            }               
+        };
         return greeting.sayHi() + " " + greeting.sayBye() + " " + greeting.sayFavoriteMovie();
     }
         
